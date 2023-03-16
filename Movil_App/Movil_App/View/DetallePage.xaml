@@ -17,34 +17,43 @@
                        FontSize="15">
                 </Label>
                 <Label Text="{Binding Nombre}"
-                        HorizontalOptions="End">
+                       HorizontalOptions="End"
+                       FontSize="18">
                 </Label>
                 
                 <Label Text="Apellido: "
                        FontSize="15"></Label>
                 <Label Text="{Binding Apellido}"
-                        HorizontalOptions="End">
+                       HorizontalOptions="End"
+                       FontSize="18">
                 </Label>
                 <Label Text="Numero:" 
                        FontSize="15"></Label>
                 <Label Text="{Binding Numero}" 
-                       HorizontalOptions="End">
+                       HorizontalOptions="End"
+                       FontSize="18">
                 </Label>
                 <Label Text="Edad" 
                        FontSize="15">
                 </Label>
                 <Label Text="{Binding Edad}" 
-                       HorizontalOptions="End">
+                       HorizontalOptions="End"
+                       FontSize="18">
                 </Label>
                 <Label Text="Fecha visita:" 
                        FontSize="15">
                 </Label>
                 <Label Text="{Binding Fecha}" 
                        HorizontalOptions="End"
+                       FontSize="18"
                        TextColor="Red">
+                </Label>
+                <Label Text="Hora visita:" 
+                       FontSize="15">
                 </Label>
                 <Label Text="{Binding Hora}" 
                        HorizontalOptions="End"
+                       FontSize="18"
                        TextColor="Red">
                 </Label>
 

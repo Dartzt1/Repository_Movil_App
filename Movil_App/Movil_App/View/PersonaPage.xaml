@@ -57,7 +57,8 @@
                 <Button Text="Guardar" 
                         Command="{Binding GuardarCommand}"  
                         VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="Center">
+                        HorizontalOptions="Center"
+                        BackgroundColor="Green">
                 </Button>
                  
                 <Button Text="Eliminar" 

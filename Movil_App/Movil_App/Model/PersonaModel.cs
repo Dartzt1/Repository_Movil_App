@@ -112,7 +112,7 @@ namespace Movil_App.Model
 
 		public string NombreCompleto
 		{
-			get { return $"{Nombre} {Apellido} {Numero}"; 
+			get { return $"{Nombre} {Apellido}"; 
 			
 			}
 			set { nombreCompleto = value;
