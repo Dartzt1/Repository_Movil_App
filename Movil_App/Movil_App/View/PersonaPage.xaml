@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              x:Class="Movil_App.View.PersonaPage"
-             Title="Contacto">
-    
+             Title="Agenda"
+             >
+
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView >
             <StackLayout Padding="10" Margin="5">
 
-                <Image Source="inicio.png" HeightRequest="100" WidthRequest="100"/>
+                <Image Source="Perfil.png" HeightRequest="100" WidthRequest="100"/>
 
                 <Label IsVisible="{Binding Id}"></Label>
 
@@ -16,16 +17,29 @@
                 <Entry Text="{Binding Nombre }"
                        Placeholder="Ingresa el nombre completo"></Entry>
                 
-                <Label Text="Apelldio"></Label>
+                <Label Text="Apellido"></Label>
                 <Entry Text="{Binding Apellido }"
                        Placeholder="Ingresa el apellido completo"></Entry>
                 
                 <Label Text="Numero"></Label>
-                <Entry Text="{Binding Numero }" Keyboard="Numeric"
+                <Entry Text="{Binding Numero }" 
+                       Keyboard="Numeric"
+                       Placeholder="Ingresa numero"
                        ></Entry>
-                
+
                 <Label Text="Edad"></Label>
                 <Entry Text="{Binding Edad }" Keyboard="Numeric"
+                       Placeholder="Ingresa edad"
+                       ></Entry>
+
+                <Label Text="Fecha Visita"></Label>
+                <Entry Text="{Binding Fecha }"
+                        Placeholder="Fecha a visitar"
+                       ></Entry>
+
+                <Label Text="Hora a visitar"></Label>
+                <Entry Text="{Binding Hora }"
+                        Placeholder="Hora"
                        ></Entry>
 
                 <Button Text="Limpiar" 
@@ -49,15 +63,17 @@
                 <Button Text="Eliminar" 
                         Command="{Binding EliminarCommand}" 
                         VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="Center">
+                        HorizontalOptions="Center"
+                        BackgroundColor="#E74C3C">
                 </Button>
                 
                 <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"></ActivityIndicator>
 
-                <ListView x:Name="LvPersonas" ItemsSource="{Binding Personas}">
-                    <ListView.ItemTemplate>
+                <ListView x:Name="LvPersonas" ItemsSource="{Binding Personas}" >
+                    <ListView.ItemTemplate >
                         <DataTemplate>
-                            <TextCell Text="{Binding Edad}" Detail="{Binding NombreCompleto}">
+                            <TextCell Text="{Binding Fecha}" 
+                                      Detail="{Binding NombreCompleto}">
 
                             </TextCell>
                         </DataTemplate>

@@ -39,7 +39,9 @@ namespace Movil_App.ViewModel
                 Apellido = Apellido,
                 Numero = Numero,
                 Edad = Edad,
-                Id=IdPersona.ToString()
+                Fecha = Fecha,
+                Hora = Hora,
+                Id =IdPersona.ToString()
             };
             servicio.Guardar(modelo);
             await Task.Delay(2000);
@@ -55,6 +57,8 @@ namespace Movil_App.ViewModel
                 Apellido = Apellido,
                 Numero = Numero,
                 Edad = Edad,
+                Fecha = Fecha,
+                Hora = Hora,
                 Id = Id
             };
             servicio.Modificar(modelo);
@@ -76,6 +80,8 @@ namespace Movil_App.ViewModel
             Apellido = "";
             Numero = 0;
             Edad = 0;
+            Fecha = "";
+            Hora = "";
             Id = "";
         }
 

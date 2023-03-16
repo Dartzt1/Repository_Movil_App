@@ -34,6 +34,8 @@ namespace Movil_App.View
                 contexto.Apellido = modelo.Apellido;
                 contexto.Numero = modelo.Numero;
                 contexto.Edad = modelo.Edad;
+                contexto.Fecha = modelo.Fecha;
+                contexto.Hora = modelo.Hora;
                 contexto.Id = modelo.Id;
 
             }

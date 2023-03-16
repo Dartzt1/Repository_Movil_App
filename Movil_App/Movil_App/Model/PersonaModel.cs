@@ -86,11 +86,33 @@ namespace Movil_App.Model
             }
 		}
 
+		private string fecha;
+
+		public string Fecha
+		{
+			get { return fecha; }
+			set { fecha = value;
+                OnPropertyChanged();
+            }
+		}
+
+		private string hora;
+
+		public string Hora
+		{
+			get { return hora; }
+			set { hora = value;
+                OnPropertyChanged();
+            }
+		}
+
+
+
 		private string nombreCompleto;
 
 		public string NombreCompleto
 		{
-			get { return $"{Nombre} {Apellido} {numero}"; 
+			get { return $"{Nombre} {Apellido} {Numero}"; 
 			
 			}
 			set { nombreCompleto = value;
