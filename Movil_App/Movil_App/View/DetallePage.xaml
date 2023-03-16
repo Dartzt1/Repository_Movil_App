@@ -4,8 +4,16 @@
              x:Class="Movil_App.View.DetallePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding Nombre}"></Label>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Detalles Del Contacto" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Nombre completo:"></Label>
+            <Label Text="{Binding Nombre}" ></Label>
+            <Label Text="Apellido completo:"></Label>
             <Label Text="{Binding Apellido}"></Label>
+            <Label Text="Numero completo:"></Label>
+            <Label Text="{Binding Numero}"></Label>
+            <Label Text="Edad:"></Label>
             <Label Text="{Binding Edad}"></Label>
         </StackLayout>
     </ContentPage.Content>

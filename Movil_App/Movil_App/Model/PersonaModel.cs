@@ -51,6 +51,7 @@ namespace Movil_App.Model
             }
 		}
 
+
 		private string apellido;
 
 		public string Apellido
@@ -62,7 +63,20 @@ namespace Movil_App.Model
             }
 		}
 
-		private int edad;
+        private int numero;
+
+        public int Numero
+        {
+            get { return numero; }
+            set
+            {
+                numero = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(NombreCompleto));
+            }
+        }
+
+        private int edad;
 
 		public int Edad
 		{
@@ -76,7 +90,7 @@ namespace Movil_App.Model
 
 		public string NombreCompleto
 		{
-			get { return $"{Nombre} {Apellido}"; 
+			get { return $"{Nombre} {Apellido} {numero}"; 
 			
 			}
 			set { nombreCompleto = value;

@@ -28,10 +28,11 @@ namespace Movil_App.View
             if (e.SelectedItem != null)
             {
                 PersonaModel modelo = (PersonaModel)e.SelectedItem;
-                //Navigation.PushAsync(new DetallePage(modelo));
+                Navigation.PushAsync(new DetallePage(modelo));
 
                 contexto.Nombre = modelo.Nombre;
                 contexto.Apellido = modelo.Apellido;
+                contexto.Numero = modelo.Numero;
                 contexto.Edad = modelo.Edad;
                 contexto.Id = modelo.Id;
 

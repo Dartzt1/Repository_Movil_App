@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Movil_App
 {
-    public partial class MainPage : TabbedPage
+    public partial class MainPage : ContentPage
     {
         public MainPage()
         {

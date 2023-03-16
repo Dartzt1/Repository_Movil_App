@@ -1,27 +1,54 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              x:Class="Movil_App.View.PersonaPage"
-             Title="Contacto"
-             IconImageSource="inicio.png"
-             >
+             Title="Contacto">
+    
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <Label Text="{Binding Id}"></Label>
+            <StackLayout Padding="10" Margin="5">
+                <Label IsVisible="{Binding Id}"></Label>
+
                 <Label Text="Nombre"></Label>
-                <Entry Text="{Binding Nombre }"></Entry>
+                <Entry Text="{Binding Nombre }"
+                       Placeholder="Ingresa el nombre completo"></Entry>
+                
                 <Label Text="Apelldio"></Label>
-                <Entry Text="{Binding Apellido }"></Entry>
+                <Entry Text="{Binding Apellido }"
+                       Placeholder="Ingresa el apellido completo"></Entry>
+                
+                <Label Text="Numero"></Label>
+                <Entry Text="{Binding Numero }" Keyboard="Numeric"
+                       ></Entry>
+                
                 <Label Text="Edad"></Label>
-                <Entry Text="{Binding Edad }" Keyboard="Numeric"></Entry>
-                <Label Text="{Binding NombreCompleto}" TextColor="DarkBlue"></Label>
+                <Entry Text="{Binding Edad }" Keyboard="Numeric"
+                       ></Entry>
 
-                <Button Text="Guardar" Command="{Binding GuardarCommand}"></Button>
-                <Button Text="Modificar" Command="{Binding ModificarCommand}"></Button>
-                <Button Text="Eliminar" Command="{Binding EliminarCommand}"></Button>
-                <Button Text="Limpiar" Command="{Binding LimpiarCommand}"></Button>
+                <Button Text="Limpiar" 
+                        Command="{Binding LimpiarCommand}" 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center">
+                </Button>
 
+                <Button Text="Modificar" 
+                        Command="{Binding ModificarCommand}" 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center">
+                </Button>
+
+                <Button Text="Guardar" 
+                        Command="{Binding GuardarCommand}"  
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center">
+                </Button>
+                 
+                <Button Text="Eliminar" 
+                        Command="{Binding EliminarCommand}" 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center">
+                </Button>
+                
                 <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"></ActivityIndicator>
 
                 <ListView x:Name="LvPersonas" ItemsSource="{Binding Personas}">

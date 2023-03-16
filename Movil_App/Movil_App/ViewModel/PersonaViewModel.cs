@@ -37,6 +37,7 @@ namespace Movil_App.ViewModel
             {
                 Nombre = Nombre,
                 Apellido = Apellido,
+                Numero = Numero,
                 Edad = Edad,
                 Id=IdPersona.ToString()
             };
@@ -52,6 +53,7 @@ namespace Movil_App.ViewModel
             {
                 Nombre = Nombre,
                 Apellido = Apellido,
+                Numero = Numero,
                 Edad = Edad,
                 Id = Id
             };
@@ -72,6 +74,7 @@ namespace Movil_App.ViewModel
         {
             Nombre = "";
             Apellido = "";
+            Numero = 0;
             Edad = 0;
             Id = "";
         }
