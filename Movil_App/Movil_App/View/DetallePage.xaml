@@ -4,17 +4,39 @@
              x:Class="Movil_App.View.DetallePage">
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Frame BackgroundColor="#1ABC9C" Padding="10" CornerRadius="0">
                 <Label Text="Detalles Del Contacto" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
-            <Label Text="Nombre completo:"></Label>
-            <Label Text="{Binding Nombre}" ></Label>
-            <Label Text="Apellido completo:"></Label>
-            <Label Text="{Binding Apellido}"></Label>
-            <Label Text="Numero completo:"></Label>
-            <Label Text="{Binding Numero}"></Label>
-            <Label Text="Edad:"></Label>
-            <Label Text="{Binding Edad}"></Label>
+
+            <Image Source="inicio.png" HeightRequest="100" WidthRequest="100"/>
+
+            <StackLayout Padding="10" Margin="5">
+                
+                <Label Text="Nombre completo:" 
+                       FontSize="15">
+                </Label>
+                <Label Text="{Binding Nombre}"
+                        HorizontalOptions="End">
+                </Label>
+                
+                <Label Text="Apellido completo: "
+                       FontSize="15"></Label>
+                <Label Text="{Binding Apellido}"
+                        HorizontalOptions="End">
+                </Label>
+                <Label Text="Numero completo:" 
+                       FontSize="15"></Label>
+                <Label Text="{Binding Numero}" 
+                       HorizontalOptions="End">
+                </Label>
+                <Label Text="Edad:" 
+                       FontSize="15">
+                </Label>
+                <Label Text="{Binding Edad}" 
+                       HorizontalOptions="End">
+                </Label>
+                
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

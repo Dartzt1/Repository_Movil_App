@@ -7,6 +7,9 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="10" Margin="5">
+
+                <Image Source="inicio.png" HeightRequest="100" WidthRequest="100"/>
+
                 <Label IsVisible="{Binding Id}"></Label>
 
                 <Label Text="Nombre"></Label>
@@ -60,6 +63,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
