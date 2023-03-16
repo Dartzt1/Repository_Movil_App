@@ -23,7 +23,7 @@ namespace Movil_App.View
             LvPersonas.ItemSelected += LvPersonas_ItemSelected;
         }
 
-        private void LvPersonas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        public void LvPersonas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
             {

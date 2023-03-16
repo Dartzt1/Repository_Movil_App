@@ -11,7 +11,7 @@ namespace Movil_App
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new PersonaPage());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

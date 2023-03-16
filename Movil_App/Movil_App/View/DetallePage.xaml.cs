@@ -11,6 +11,7 @@ using Xamarin.Forms.Xaml;
 namespace Movil_App.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class DetallePage : ContentPage
     {
         public DetallePage(PersonaModel model)

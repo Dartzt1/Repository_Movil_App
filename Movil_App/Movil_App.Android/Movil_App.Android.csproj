@@ -85,13 +85,16 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\perfil.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Movil_App\Movil_App.csproj">
       <Project>{7B7B3A8D-C0B3-4349-92EE-9ADC7BC1A88D}</Project>
       <Name>Movil_App</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Perfil.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
