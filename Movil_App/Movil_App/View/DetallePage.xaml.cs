@@ -14,10 +14,19 @@ namespace Movil_App.View
 
     public partial class DetallePage : ContentPage
     {
+        public DetallePage()
+        {
+        }
+
         public DetallePage(PersonaModel model)
         {
             InitializeComponent();
             BindingContext = model;
+        }
+
+        async void btnCancelar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }

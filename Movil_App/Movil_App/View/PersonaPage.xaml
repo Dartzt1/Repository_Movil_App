@@ -4,79 +4,138 @@
              x:Class="Movil_App.View.PersonaPage"
              Title="Agregar"
              IconImageSource="Agregar.png"
-             >
+             Background="#CFD8DC">
 
-    <ContentPage.Content>
-        <ScrollView >
-            <StackLayout Padding="10" Margin="5">
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout Padding="10" Margin="10" >
+
+                <Frame BackgroundColor="Azure" Padding="10" CornerRadius="10">
+                    <Label Text="Añadir" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"  FontAttributes="Italic"/>
+                </Frame>
 
                 <Image Source="Perfil.png" HeightRequest="100" WidthRequest="100"/>
 
                 <Label IsVisible="{Binding Id}"></Label>
 
-                <Label Text="Nombre"></Label>
-                <Entry Text="{Binding Nombre }"
-                       Placeholder="Ingresa el nombre completo"></Entry>
+                <Label Text="Nombre" 
+                       TextColor="Black"
+                       FontSize="17"
+                       FontAttributes="Bold"
+                    ></Label>
+                <Entry Text="{Binding Nombre}" 
+                       Placeholder="Ingresa el nombre completo"
+                       TextColor="Black"  
+                ></Entry>
+
                 
-                <Label Text="Apellido"></Label>
+                <Label Text="Apellido" 
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="17"></Label>
                 <Entry Text="{Binding Apellido }"
-                       Placeholder="Ingresa el apellido completo"></Entry>
+                       Placeholder="Ingresa el apellido completo"
+                       TextColor="Black"
+                ></Entry>
+
                 
-                <Label Text="Numero"></Label>
+                <Label Text="Numero" 
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="17"></Label>
                 <Entry Text="{Binding Numero }" 
                        Keyboard="Numeric"
                        Placeholder="Ingresa numero"
+                       TextColor="Black"
                        ></Entry>
 
-                <Label Text="Edad"></Label>
-                <Entry Text="{Binding Edad }" Keyboard="Numeric"
+                <Label Text="Edad" 
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="17"></Label>
+                <Entry Text="{Binding Edad }" 
+                       Keyboard="Numeric"
                        Placeholder="Ingresa edad"
+                       TextColor="Black"
                        ></Entry>
 
-                <Label Text="Fecha Visita"></Label>
+                <Label Text="Fecha Visita"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="17"></Label>
                 <Entry Text="{Binding Fecha }"
                         Placeholder="Fecha a visitar"
+                       TextColor="Black"
                        ></Entry>
 
-                <Label Text="Hora a visitar"></Label>
+                <Label Text="Hora a visitar"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="17"></Label>
                 <Entry Text="{Binding Hora }"
                         Placeholder="Hora"
+                       TextColor="Black"
                        ></Entry>
 
                 <Button Text="Limpiar" 
                         Command="{Binding LimpiarCommand}" 
                         VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="Center">
+                        HorizontalOptions="Center"
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        BackgroundColor="Azure"
+                        TextColor="Black"
+                        BorderColor="#85929E"
+                        BorderWidth="1"
+                        CornerRadius="20">
                 </Button>
 
                 <Button Text="Modificar" 
                         Command="{Binding ModificarCommand}" 
                         VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="Center">
+                        HorizontalOptions="Center"
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        BackgroundColor="Azure"
+                        TextColor="Black"
+                        BorderColor="#85929E"
+                        BorderWidth="1"
+                        CornerRadius="20">
                 </Button>
 
                 <Button Text="Guardar" 
                         Command="{Binding GuardarCommand}"  
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="Center"
-                        BackgroundColor="Green">
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        BackgroundColor="Azure"
+                        TextColor="Black"
+                        BorderColor="#85929E"
+                        BorderWidth="1"
+                        CornerRadius="20">
                 </Button>
 
                 <Button Text="Eliminar" 
                         Command="{Binding EliminarCommand}" 
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="Center"
-                        BackgroundColor="#E74C3C">
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        BackgroundColor="#E74C3C"
+                        TextColor="Black"
+                        BorderColor="#85929E"
+                        BorderWidth="1"
+                        CornerRadius="20">
                 </Button>
 
                 <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"></ActivityIndicator>
 
                 <ListView x:Name="LvPersonas" ItemsSource="{Binding Personas}">
-                    <ListView.ItemTemplate >
+                    <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Fecha}" 
                                       Detail="{Binding NombreCompleto}">
-
                             </TextCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>

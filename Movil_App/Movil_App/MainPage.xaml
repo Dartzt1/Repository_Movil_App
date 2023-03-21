@@ -1,9 +1,141 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Movil_App.View"
             x:Class="Movil_App.MainPage"
-            Title="Agenda">
+            Title="Menú"
+            Background="WhiteSmoke">
 
-    <local:PersonaPage/>
-    <local:Perfil/>
-</TabbedPage>
+    <StackLayout>
+        <Frame BackgroundColor="WhiteSmoke" Padding="10" CornerRadius="10">
+            <Label Text="Perfil" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"  FontAttributes="Italic"/>
+        </Frame>
+
+        <Image Source="Perfil.png"
+               WidthRequest="170"></Image>
+
+ 
+            <Frame CornerRadius="20" 
+                   HorizontalOptions="Center" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="150"
+                   HeightRequest="35">
+            <Label Text="Mis Datos"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="20"
+                           TextColor="Black">
+            </Label>
+        </Frame>
+
+        <StackLayout Padding="40" Margin="1" >
+
+            <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                <Label Text="Nombre:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="20"
+                           TextColor="Black">
+                </Label>
+            </Frame>
+            <Label Text="Brayan Anthony Solis De La Roca"
+                   TextColor="Black"
+                   HorizontalOptions="EndAndExpand"
+                   FontSize="18"
+                   FontAttributes="Italic">
+                
+            </Label>
+            
+            <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="95"
+                   HeightRequest="35">
+                <Label Text="Direccion:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="20"
+                           TextColor="Black">
+                </Label>
+            </Frame>
+            <Label Text="Av. Huancavelica N° 1035"
+                   TextColor="Black"
+                   HorizontalOptions="EndAndExpand"
+                   FontSize="18"
+                   FontAttributes="Italic">
+
+            </Label>
+
+            <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="120"
+                   HeightRequest="35">
+                <Label Text="Urbanización:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="20"
+                           TextColor="Black">
+                </Label>
+            </Frame>
+            <Label Text="Urb. Santa Rosa"
+                   TextColor="Black"
+                   HorizontalOptions="EndAndExpand"
+                   FontSize="18"
+                   FontAttributes="Italic">
+
+            </Label>
+
+            <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="170"
+                   HeightRequest="35">
+                <Label Text="Numero de Celular:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="20"
+                           TextColor="Black">
+                </Label>
+            </Frame>
+            <Label Text="+51 960 083 308"
+                   TextColor="Black"
+                   HorizontalOptions="EndAndExpand"
+                   FontSize="18"
+                   FontAttributes="Italic">
+
+            </Label>
+
+        </StackLayout>
+
+   
+        <Button Text="Agendar"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                HeightRequest="40"
+                BackgroundColor="White"
+                TextColor="Black"
+                BorderColor="#85929E"
+                BorderWidth="1"
+                CornerRadius="20"
+                x:Name="btnAgendar"
+                Clicked="btnAgendar_Clicked">
+        </Button>
+
+
+    </StackLayout>
+    
+</ContentPage>

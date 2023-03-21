@@ -2,9 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:model="clr-namespace:Movil_App.Model" x:DataType="model:PersonaModel"
              x:Class="Movil_App.View.DetallePage"
-             Title="Detalle de Contacto">
+             Title="Detalle de Contacto"
+             Background="#CFD8DC">
     <ContentPage.Content>
-        <StackLayout Padding="10" >
+        <StackLayout Padding="10" Margin="10" >
+            
+            <Frame BackgroundColor="Azure" Padding="10" CornerRadius="10">
+                <Label Text="Detalles" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"  FontAttributes="Italic"/>
+            </Frame>
 
             <Image Source="perfil.png" 
                    HeightRequest="100" 
@@ -14,34 +19,48 @@
             <StackLayout Padding="10" Margin="5">
                 
                 <Label Text="Nombre:" 
-                       FontSize="15">
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       TextColor="Black">
                 </Label>
                 <Label Text="{Binding Nombre}"
                        HorizontalOptions="End"
-                       FontSize="18">
+                       FontAttributes="Bold"
+                       TextColor="Black">
                 </Label>
                 
                 <Label Text="Apellido: "
-                       FontSize="15"></Label>
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       TextColor="Black"></Label>
                 <Label Text="{Binding Apellido}"
                        HorizontalOptions="End"
-                       FontSize="18">
+                       FontSize="18"
+                       TextColor="Black">
                 </Label>
                 <Label Text="Numero:" 
-                       FontSize="15"></Label>
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       TextColor="Black"></Label>
                 <Label Text="{Binding Numero}" 
                        HorizontalOptions="End"
-                       FontSize="18">
+                       FontSize="18"
+                       TextColor="Black">
                 </Label>
                 <Label Text="Edad" 
-                       FontSize="15">
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       TextColor="Black">
                 </Label>
                 <Label Text="{Binding Edad}" 
                        HorizontalOptions="End"
-                       FontSize="18">
+                       FontSize="18"
+                       TextColor="Black">
                 </Label>
                 <Label Text="Fecha visita:" 
-                       FontSize="15">
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       TextColor="Black">
                 </Label>
                 <Label Text="{Binding Fecha}" 
                        HorizontalOptions="End"
@@ -49,7 +68,9 @@
                        TextColor="Red">
                 </Label>
                 <Label Text="Hora visita:" 
-                       FontSize="15">
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       TextColor="Black">
                 </Label>
                 <Label Text="{Binding Hora}" 
                        HorizontalOptions="End"
@@ -57,7 +78,19 @@
                        TextColor="Red">
                 </Label>
 
-          
+                <Button Text="Salir"
+                    HorizontalOptions="Center"
+                    WidthRequest="220"
+                    HeightRequest="40"
+                    BackgroundColor="Azure"
+                    TextColor="Black"
+                    BorderColor="#85929E"
+                    BorderWidth="1"
+                    CornerRadius="20"
+                    x:Name="btnCancelar"
+                    Clicked="btnCancelar_Clicked">
+                </Button>
+
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

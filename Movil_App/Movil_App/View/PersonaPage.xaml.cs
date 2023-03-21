@@ -28,7 +28,7 @@ namespace Movil_App.View
             if (e.SelectedItem != null)
             {
                 PersonaModel modelo = (PersonaModel)e.SelectedItem;
-                Navigation.PushAsync(new DetallePage(modelo));
+                Navigation.PushModalAsync(new DetallePage(modelo));
 
                 contexto.Nombre = modelo.Nombre;
                 contexto.Apellido = modelo.Apellido;

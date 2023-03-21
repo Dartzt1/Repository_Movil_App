@@ -121,7 +121,7 @@ namespace Movil_App.Model
             }
 		}
 
-		private string mensaje;
+		public string mensaje;
 
         public string Mensaje
 		{
