@@ -4,7 +4,7 @@
              x:Class="Movil_App.View.PersonaPage"
              Title="Agregar"
              IconImageSource="Agregar.png"
-             Background="#CFD8DC">
+             Background="WhiteSmoke">
 
     <ContentPage.Content >
         <ScrollView>
@@ -18,60 +18,119 @@
 
                 <Label IsVisible="{Binding Id}"></Label>
 
-                <Label Text="Nombre" 
-                       TextColor="Black"
-                       FontSize="17"
-                       FontAttributes="Bold"
-                    ></Label>
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                    <Label Text="Nombre:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Entry Text="{Binding Nombre}" 
                        Placeholder="Ingresa el nombre completo"
                        TextColor="Black"  
                 ></Entry>
 
-                
-                <Label Text="Apellido" 
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       FontSize="17"></Label>
+
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                    <Label Text="Apellido:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Entry Text="{Binding Apellido }"
                        Placeholder="Ingresa el apellido completo"
                        TextColor="Black"
                 ></Entry>
 
-                
-                <Label Text="Numero" 
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       FontSize="17"></Label>
+
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                    <Label Text="Numero:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Entry Text="{Binding Numero }" 
                        Keyboard="Numeric"
                        Placeholder="Ingresa numero"
                        TextColor="Black"
                        ></Entry>
 
-                <Label Text="Edad" 
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       FontSize="17"></Label>
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                    <Label Text="Edad:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Entry Text="{Binding Edad }" 
                        Keyboard="Numeric"
                        Placeholder="Ingresa edad"
                        TextColor="Black"
                        ></Entry>
 
-                <Label Text="Fecha Visita"
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       FontSize="17"></Label>
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                    <Label Text="Fecha Visita:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Entry Text="{Binding Fecha }"
                         Placeholder="Fecha a visitar"
                        TextColor="Black"
                        ></Entry>
 
-                <Label Text="Hora a visitar"
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       FontSize="17"></Label>
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                    <Label Text="Hora a Visitar:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Entry Text="{Binding Hora }"
                         Placeholder="Hora"
                        TextColor="Black"
