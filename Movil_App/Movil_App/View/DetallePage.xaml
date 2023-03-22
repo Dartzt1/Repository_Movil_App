@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:model="clr-namespace:Movil_App.Model" x:DataType="model:PersonaModel"
              x:Class="Movil_App.View.DetallePage"
              Title="Detalle de Contacto"
-             Background="#CFD8DC">
+             Background="#AED6F1">
     <ContentPage.Content>
         <StackLayout Padding="10" Margin="10" >
             
@@ -17,61 +17,121 @@
                    />
 
             <StackLayout Padding="10" Margin="5">
-                
-                <Label Text="Nombre:" 
-                       FontSize="15"
-                       FontAttributes="Bold"
-                       TextColor="Black">
-                </Label>
+
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                    <Label Text="Nombre:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Label Text="{Binding Nombre}"
                        HorizontalOptions="End"
-                       FontAttributes="Bold"
+                       FontSize="18"
                        TextColor="Black">
                 </Label>
-                
-                <Label Text="Apellido: "
-                       FontSize="15"
-                       FontAttributes="Bold"
-                       TextColor="Black"></Label>
+
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="90"
+                   HeightRequest="35">
+                    <Label Text="Apellido:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Label Text="{Binding Apellido}"
                        HorizontalOptions="End"
                        FontSize="18"
                        TextColor="Black">
                 </Label>
-                <Label Text="Numero:" 
-                       FontSize="15"
-                       FontAttributes="Bold"
-                       TextColor="Black"></Label>
+
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="165"
+                   HeightRequest="35">
+                    <Label Text="Numero De Celular:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Label Text="{Binding Numero}" 
                        HorizontalOptions="End"
                        FontSize="18"
                        TextColor="Black">
                 </Label>
-                <Label Text="Edad" 
-                       FontSize="15"
-                       FontAttributes="Bold"
-                       TextColor="Black">
-                </Label>
+
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="80"
+                   HeightRequest="35">
+                    <Label Text="Edad:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Label Text="{Binding Edad}" 
                        HorizontalOptions="End"
                        FontSize="18"
                        TextColor="Black">
                 </Label>
-                <Label Text="Fecha visita:" 
-                       FontSize="15"
-                       FontAttributes="Bold"
-                       TextColor="Black">
-                </Label>
+
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="150"
+                   HeightRequest="35">
+                    <Label Text="Fecha De Visita:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Label Text="{Binding Fecha}" 
                        HorizontalOptions="End"
                        FontSize="18"
                        TextColor="Red">
                 </Label>
-                <Label Text="Hora visita:" 
-                       FontSize="15"
-                       FontAttributes="Bold"
-                       TextColor="Black">
-                </Label>
+
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="150"
+                   HeightRequest="35">
+                    <Label Text="Hora De Visita:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <Label Text="{Binding Hora}" 
                        HorizontalOptions="End"
                        FontSize="18"
@@ -82,7 +142,7 @@
                     HorizontalOptions="Center"
                     WidthRequest="220"
                     HeightRequest="40"
-                    BackgroundColor="Azure"
+                    BackgroundColor="White"
                     TextColor="Black"
                     BorderColor="#85929E"
                     BorderWidth="1"

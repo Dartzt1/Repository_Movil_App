@@ -3,7 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Movil_App.View"
             x:Class="Movil_App.MainPage"
             Title="Menú"
-            Background="WhiteSmoke">
+            Background="#AED6F1">
 
     <StackLayout>
         <Frame BackgroundColor="WhiteSmoke" Padding="10" CornerRadius="10">

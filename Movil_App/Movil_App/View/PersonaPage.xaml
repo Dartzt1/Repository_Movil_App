@@ -4,17 +4,17 @@
              x:Class="Movil_App.View.PersonaPage"
              Title="Agregar"
              IconImageSource="Agregar.png"
-             Background="WhiteSmoke">
+             Background="#AED6F1">
 
     <ContentPage.Content >
         <ScrollView>
             <StackLayout Padding="10" Margin="10" >
 
-                <Frame BackgroundColor="Azure" Padding="10" CornerRadius="10">
+                <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
                     <Label Text="Añadir" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"  FontAttributes="Italic"/>
                 </Frame>
 
-                <Image Source="Perfil.png" HeightRequest="100" WidthRequest="100"/>
+                <Image Source="Perfil.png" HeightRequest="150" WidthRequest="150"/>
 
                 <Label IsVisible="{Binding Id}"></Label>
 
@@ -102,7 +102,7 @@
                    HorizontalOptions="StartAndExpand" 
                    Padding="1" 
                    BackgroundColor="White"
-                   WidthRequest="90"
+                   WidthRequest="120"
                    HeightRequest="35">
                     <Label Text="Fecha Visita:"
                            HorizontalTextAlignment="Center"
@@ -121,7 +121,7 @@
                    HorizontalOptions="StartAndExpand" 
                    Padding="1" 
                    BackgroundColor="White"
-                   WidthRequest="90"
+                   WidthRequest="120"
                    HeightRequest="35">
                     <Label Text="Hora a Visitar:"
                            HorizontalTextAlignment="Center"
@@ -142,7 +142,7 @@
                         HorizontalOptions="Center"
                         WidthRequest="150"
                         HeightRequest="40"
-                        BackgroundColor="Azure"
+                        BackgroundColor="White"
                         TextColor="Black"
                         BorderColor="#85929E"
                         BorderWidth="1"
@@ -155,7 +155,7 @@
                         HorizontalOptions="Center"
                         WidthRequest="150"
                         HeightRequest="40"
-                        BackgroundColor="Azure"
+                        BackgroundColor="White"
                         TextColor="Black"
                         BorderColor="#85929E"
                         BorderWidth="1"
@@ -168,7 +168,7 @@
                         HorizontalOptions="Center"
                         WidthRequest="150"
                         HeightRequest="40"
-                        BackgroundColor="Azure"
+                        BackgroundColor="White"
                         TextColor="Black"
                         BorderColor="#85929E"
                         BorderWidth="1"
@@ -194,7 +194,10 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Fecha}" 
-                                      Detail="{Binding NombreCompleto}">
+                                      Detail="{Binding NombreCompleto}"
+                                      TextColor="#E74C3"
+                                      DetailColor="Black"
+                                      >
                             </TextCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
