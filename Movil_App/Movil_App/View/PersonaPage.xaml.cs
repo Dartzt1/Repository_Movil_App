@@ -41,6 +41,14 @@ namespace Movil_App.View
             }
         }
 
+        async void btnCancelar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
 
+        async void btnMenu_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

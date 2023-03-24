@@ -11,7 +11,7 @@
             <StackLayout Padding="10" Margin="10" >
 
                 <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
-                    <Label Text="Añadir" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"  FontAttributes="Italic"/>
+                    <Label Text="Datos Del Contacto" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"  FontAttributes="Italic"/>
                 </Frame>
 
                 <Image Source="Perfil.png" HeightRequest="150" WidthRequest="150"/>
@@ -24,7 +24,7 @@
                    BackgroundColor="White"
                    WidthRequest="90"
                    HeightRequest="35">
-                    <Label Text="Nombre:"
+                    <Label Text="Nombres:"
                            HorizontalTextAlignment="Center"
                            FontAttributes="Bold"
                            Padding="6"
@@ -34,7 +34,8 @@
                 </Frame>
                 <Entry Text="{Binding Nombre}" 
                        Placeholder="Ingresa el nombre completo"
-                       TextColor="Black"  
+                       TextColor="Black" 
+                       FontAttributes="Italic"
                 ></Entry>
 
 
@@ -44,7 +45,7 @@
                    BackgroundColor="White"
                    WidthRequest="90"
                    HeightRequest="35">
-                    <Label Text="Apellido:"
+                    <Label Text="Apellidos:"
                            HorizontalTextAlignment="Center"
                            FontAttributes="Bold"
                            Padding="6"
@@ -55,6 +56,7 @@
                 <Entry Text="{Binding Apellido }"
                        Placeholder="Ingresa el apellido completo"
                        TextColor="Black"
+                       FontAttributes="Italic"
                 ></Entry>
 
 
@@ -62,9 +64,9 @@
                    HorizontalOptions="StartAndExpand" 
                    Padding="1" 
                    BackgroundColor="White"
-                   WidthRequest="90"
+                   WidthRequest="140"
                    HeightRequest="35">
-                    <Label Text="Numero:"
+                    <Label Text="Numero Celular:"
                            HorizontalTextAlignment="Center"
                            FontAttributes="Bold"
                            Padding="6"
@@ -76,6 +78,7 @@
                        Keyboard="Numeric"
                        Placeholder="Ingresa numero"
                        TextColor="Black"
+                       FontAttributes="Italic"
                        ></Entry>
 
                 <Frame CornerRadius="20" 
@@ -96,6 +99,7 @@
                        Keyboard="Numeric"
                        Placeholder="Ingresa edad"
                        TextColor="Black"
+                       FontAttributes="Italic"
                        ></Entry>
 
                 <Frame CornerRadius="20" 
@@ -113,8 +117,9 @@
                     </Label>
                 </Frame>
                 <Entry Text="{Binding Fecha }"
-                        Placeholder="Fecha a visitar"
+                       Placeholder="Fecha a visitar"
                        TextColor="Black"
+                       FontAttributes="Italic"
                        ></Entry>
 
                 <Frame CornerRadius="20" 
@@ -132,8 +137,9 @@
                     </Label>
                 </Frame>
                 <Entry Text="{Binding Hora }"
-                        Placeholder="Hora"
+                        Placeholder="Hora Visita"
                        TextColor="Black"
+                       FontAttributes="Italic"
                        ></Entry>
 
                 <Button Text="Limpiar" 
@@ -188,20 +194,60 @@
                         CornerRadius="20">
                 </Button>
 
-                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"></ActivityIndicator>
+                <Button Text="Salir"
+                    HorizontalOptions="Center"
+                    WidthRequest="150"
+                    HeightRequest="40"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    BorderColor="#85929E"
+                    BorderWidth="1"
+                    CornerRadius="20"
+                    x:Name="btnCancelar"
+                    Clicked="btnCancelar_Clicked">
+                </Button>
 
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"></ActivityIndicator>
+                <Frame CornerRadius="20" 
+                   HorizontalOptions="StartAndExpand" 
+                   Padding="1" 
+                   BackgroundColor="White"
+                   WidthRequest="150"
+                   HeightRequest="35">
+                    <Label Text="Lista De Pendientes:"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="6"
+                           FontSize="18"
+                           TextColor="Black">
+                    </Label>
+                </Frame>
                 <ListView x:Name="LvPersonas" ItemsSource="{Binding Personas}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Fecha}" 
                                       Detail="{Binding NombreCompleto}"
-                                      TextColor="#E74C3"
+                                      TextColor="red"
                                       DetailColor="Black"
                                       >
                             </TextCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                
+                <Button Text="Menu"
+                    HorizontalOptions="Center"
+                    WidthRequest="150"
+                    HeightRequest="40"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    BorderColor="#85929E"
+                    BorderWidth="1"
+                    CornerRadius="20"
+                    x:Name="btnMenu"
+                    Clicked="btnMenu_Clicked">
+                </Button>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
